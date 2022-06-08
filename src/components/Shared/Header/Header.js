@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <header className="bg-white">
         <div className="flex items-center h-16 max-w-screen-xl gap-8 px-4 mx-auto sm:px-6 lg:px-8">
-          <a className="block text-teal-600" href="/">
+          <Link className="block text-teal-600" to="/">
             <span className="sr-only">Home</span>
             <svg
               className="h-8"
@@ -19,7 +19,7 @@ const Header = () => {
                 fill="currentColor"
               />
             </svg>
-          </a>
+          </Link>
 
           <div className="flex items-center justify-end flex-1 md:justify-between">
             <nav className="hidden md:block" aria-labelledby="header-navigation">
@@ -29,58 +29,24 @@ const Header = () => {
 
               <ul className="flex items-center gap-6 text-sm">
                 <li>
-                  <a
+                  <Link
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
+                    to="/"
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
+                  <Link 
                     className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
+                    to="/"
                   >
                     Careers
-                  </a>
+                  </Link>
                 </li>
 
-                <li>
-                  <a
-                    className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
-                  >
-                    History
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
-                  >
-                    Services
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
-                  >
-                    Projects
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-gray-500 transition hover:text-gray-500/75"
-                    href="/"
-                  >
-                    Blog
-                  </a>
-                </li>
+                
               </ul>
             </nav>
 

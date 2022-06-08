@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const EditUser = () => {
-  const navigate = useNavigate();
   const { id } = useParams();
   const fetchURL = `https://jsonplaceholder.typicode.com/users/${id}`;
 

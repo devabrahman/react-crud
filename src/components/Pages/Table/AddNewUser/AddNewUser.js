@@ -52,12 +52,12 @@ const AddNewUser = () => {
         <h2 className="text-center text-3xl font-bold text-green-600 my-10">
           Add A New User
         </h2>
-        <form onSubmit={handleToSubmit} class="w-full mx-auto max-w-lg">
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full px-3 mb-6 md:mb-0">
+        <form onSubmit={handleToSubmit} className="w-full mx-auto max-w-lg">
+          <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="w-full px-3 mb-6 md:mb-0">
               <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-first-name"
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-first-name"
               >
                 Full Name
               </label>
@@ -71,17 +71,17 @@ const AddNewUser = () => {
               {fName ? (
                 ""
               ) : (
-                <p class="text-red-500 text-xs italic">
+                <p className="text-red-500 text-xs italic">
                   Please fill out this field.
                 </p>
               )}
             </div>
           </div>
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full  md:w-1/2  px-3 mb-6 md:mb-0">
+          <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="w-full  md:w-1/2  px-3 mb-6 md:mb-0">
               <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-first-name"
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-first-name"
               >
                 Email
               </label>
@@ -93,19 +93,19 @@ const AddNewUser = () => {
                 required
                 onBlur={(e)=>handleEvent(setEmail,e)}
               />
-              { email?"":<p class="text-red-500 text-xs italic">
+              { email?"":<p className="text-red-500 text-xs italic">
                 Please fill out this field.
               </p>}
             </div>
-            <div class="w-full md:w-1/2 px-3">
+            <div className="w-full md:w-1/2 px-3">
               <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-last-name"
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-last-name"
               >
                 Phone
               </label>
               <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-last-name"
                 type="number"
                 placeholder="0123456789"
@@ -114,33 +114,33 @@ const AddNewUser = () => {
             </div>
           </div>
 
-          <div class="flex flex-wrap -mx-3 mb-2">
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <div className="flex flex-wrap -mx-3 mb-2">
+            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="userName"
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="userName"
               >
                 User Name
               </label>
               <input
                 placeholder="ema123"
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 type="text"
                 name="phone"
                 onBlur={e=>handleEvent(setUserName,e)}
 
               />
             </div>
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-city"
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-city"
 
               >
                 City
               </label>
               <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-city"
                 type="text"
                 placeholder="Albuquerque"
@@ -148,7 +148,7 @@ const AddNewUser = () => {
               />
             </div>
           </div>
-          <div class="w-full mx-auto md:w-1/2 px-3 mt-10">
+          <div className="w-full mx-auto md:w-1/2 px-3 mt-10">
             <button type="submit" disabled={!fName||!email}
             className="btn btn-success text-white">
               Add a new user

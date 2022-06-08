@@ -1,4 +1,3 @@
-import { hasPointerEvents } from "@testing-library/user-event/dist/utils";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -22,21 +21,23 @@ const Table = () => {
   // delete btn function
   const userDelete = async (id) => {
     const url = `https://jsonplaceholder.typicode.com/users/${id}`;
-    await fetch(url, {
-      method: "DELETE",
-    }).then((res) => {
-      if (res.status !== 200) {
-        return console.log("sever not active");
-      } else {
-        const restUsers = users.filter((user) => user.id !== id);
-        setUsers(restUsers);
-        toast.success("successfully delete");
-      }
-    });
+    if (window.confirm("Are you want do delete")) {
+      await fetch(url, {
+        method: "DELETE",
+      }).then((res) => {
+        if (res.status !== 200) {
+          return console.log("sever not active");
+        } else {
+          const restUsers = users.filter((user) => user.id !== id);
+          setUsers(restUsers);
+          toast.success("successfully delete");
+        }
+      });
+    }
   };
 
-// edit link
- 
+  // edit link
+
   return (
     <div>
       <div className="overflow-x-auto w-full">
@@ -56,6 +57,7 @@ const Table = () => {
               rendImg();
               return (
                 <SingleRow
+                  key={user.id}
                   info={user}
                   userDelete={userDelete}
                   imgURL={rendImg()}
@@ -75,13 +77,15 @@ const Table = () => {
           </tfoot> */}
         </table>
         <div className="flex justify-between">
-          <div class="btn-group">
-            <button class="btn">1</button>
-            <button class="btn btn-active">2</button>
-            <button class="btn">3</button>
-            <button class="btn">4</button>
+          <div className="btn-group">
+            <button className="btn">1</button>
+            <button className="btn btn-active">2</button>
+            <button className="btn">3</button>
+            <button className="btn">4</button>
           </div>
-          <Link to='/add-new-user' className="btn bnt-success mr-[10%]">Add a New Users</Link>
+          <Link to="/add-new-user" className="btn bnt-success mr-[10%]">
+            Add a New Users
+          </Link>
         </div>
       </div>
     </div>
